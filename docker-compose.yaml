@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    ports:
+      - 4000:4000
+  # jekyll:
+  #   image: mrxder/jekyll-docker-arm64:latest     # Image name to pull from Docker Hub
+  #   command: jekyll serve --livereload     # Command to run when the container starts
+  #   ports:
+  #     - 4000:4000                   # Map local port 4000 to port 4000 in the container
+  #     - 35729:35729                 # We need to specify another port for the Jekyll 3.70+ live reload feature
+  #   volumes:
+  #     - ./src:/srv/jekyll         
