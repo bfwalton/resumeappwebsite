@@ -1,7 +1,9 @@
 FROM mrxder/jekyll-docker-arm64
 
-COPY . .
+COPY Gemfile .
 
 RUN bundle install
 
-ENTRYPOINT [ "bundle", "exec", "jekyll", "serve" ]
+COPY . .
+
+ENTRYPOINT [ "bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0" ]
